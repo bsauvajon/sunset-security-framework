@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sunset Security Framework — La sécurité par ancienneté</title>
+<meta name="description" content="Chaque année qui passe éloigne votre système des outils capables de l'attaquer. La méthodologie de référence pour rester en ligne sans rester compréhensible.">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip" href="#manifeste">Aller au contenu</a>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <span>Le temps est le seul correctif qui s'applique tout seul</span>
+    <span>98 % de nos clients n'ont plus d'administrateur système</span>
+    <span>Votre serveur de 1998 se porte très bien, merci</span>
+    <span>SSF élu cabinet de l'année par un comité que nous avons nommé</span>
+    <span>Nouveau : le dernier sachant est parti sans laisser d'adresse</span>
+    <span>Le temps est le seul correctif qui s'applique tout seul</span>
+    <span>98 % de nos clients n'ont plus d'administrateur système</span>
+    <span>Votre serveur de 1998 se porte très bien, merci</span>
+    <span>SSF élu cabinet de l'année par un comité que nous avons nommé</span>
+    <span>Nouveau : le dernier sachant est parti sans laisser d'adresse</span>
+  </div>
+</div>
+
+<header class="topbar">
+  <div class="wrap topbar__inner">
+    <a class="brand" href="#top">
+      <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="16" cy="16" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+        <path d="M2 16h28" stroke="currentColor" stroke-width="2"/>
+        <path d="M6 24h20" stroke="currentColor" stroke-width="2" opacity=".35"/>
+      </svg>
+      <span class="brand__text">Sunset<span>Security Framework</span></span>
+    </a>
+
+    <nav class="nav" aria-label="Sections">
+      <a href="#manifeste">Manifeste</a>
+      <a href="#avantages">Avantages</a>
+      <a href="#methode">Méthode</a>
+      <a href="#maturite">Maturité</a>
+      <a href="#offres">Offres</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <div class="topbar__right">
+      <span class="meter" id="obsolescence-meter">OBSOLESCENCE 0 %</span>
+      <a class="btn btn--sm" href="#maturite">Auditer</a>
+    </div>
+  </div>
+  <div class="meterbar"><span id="meter-fill"></span></div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <p class="label hero__eyebrow">Obsolescence-as-a-Service · Depuis 2019</p>
+      <h1 class="hero__title">La sécurité<br>par<br><em>ancienneté.</em></h1>
+      <p class="hero__lead">
+        Chaque année qui passe éloigne votre système des outils capables de l'attaquer.
+        SSF accompagne les directions des systèmes d'information qui veulent rester
+        en ligne sans rester compréhensibles.
+      </p>
+      <div class="hero__actions">
+        <a class="btn" href="#maturite">Évaluer ma maturité <span aria-hidden="true">→</span></a>
+        <a class="btn btn--ghost" id="cta-manifeste" href="#">Manifeste <span class="btn__meta">PDF · 0 Ko</span></a>
+      </div>
+
+      <dl class="stats">
+        <div class="stat">
+          <dt>Âge moyen du socle</dt>
+          <dd>23<span>ans</span></dd>
+        </div>
+        <div class="stat">
+          <dt>Attaquants qualifiés</dt>
+          <dd>0</dd>
+        </div>
+        <div class="stat">
+          <dt>Satisfaction client</dt>
+          <dd>4,9<span>/5</span></dd>
+        </div>
+      </dl>
+      <p class="stats__note">Moyenne SSF 2026 · échantillon : 1 client · toujours en ligne</p>
+    </div>
+  </section>
+
+  <!-- LOGOS -->
+  <section class="logos" aria-label="Références clients">
+    <div class="wrap">
+      <p class="label logos__title">Ils ont arrêté de patcher</p>
+      <ul class="logos__row">
+        <li>ARKHEA</li>
+        <li class="logos__alt">Nordpart</li>
+        <li>GROUPE VASSEUR</li>
+        <li class="logos__alt">Banque Helvétia</li>
+        <li>AÉRO-SUD</li>
+        <li class="logos__alt">Clinique Saint-Ombre</li>
+        <li>MUTUELLE OBLIQUE</li>
+      </ul>
+      <p class="logos__note">Logos volontairement illisibles pour des raisons de confidentialité.</p>
+    </div>
+  </section>
+
+  <!-- CONSTAT -->
+  <section class="section" id="manifeste">
+    <div class="wrap">
+      <p class="label">01 — Le constat</p>
+      <h2 class="h2">Le problème n'est pas votre SI.<br>C'est qu'il est encore compréhensible.</h2>
+      <p class="lead">
+        Depuis vingt ans, l'industrie répond à l'insécurité en ajoutant : un correctif,
+        un agent, une sonde, une couche. SSF propose de ne plus rien ajouter et de
+        laisser le temps travailler. Un système que plus personne ne comprend est un
+        système que plus personne n'attaque.
+      </p>
+
+      <div class="grid-3 figures">
+        <article class="card figure">
+          <p class="figure__num">73<span>%</span></p>
+          <p class="figure__txt">des CVE publiées concernent des logiciels que votre système ne croisera jamais.</p>
+          <p class="figure__src">Observatoire SSF, 2026</p>
+        </article>
+        <article class="card figure">
+          <p class="figure__num">0</p>
+          <p class="figure__txt">outil offensif moderne capable de parler le protocole de votre socle.</p>
+          <p class="figure__src">Étude interne, non revue</p>
+        </article>
+        <article class="card figure">
+          <p class="figure__num">1</p>
+          <p class="figure__txt">personne dans l'entreprise sait encore ce que fait ce serveur.</p>
+          <p class="figure__src">Recensement SSF, méthodologie confidentielle</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVANTAGES -->
+  <section class="section" id="avantages">
+    <div class="wrap">
+      <p class="label">02 — Les avantages</p>
+      <h2 class="h2">Plus d'ancienneté.<br>Moins de surface.</h2>
+      <div class="grid-3 cards">
+
+        <article class="card adv">
+          <p class="adv__n">01</p>
+          <h3>Surface d'attaque anachronique</h3>
+          <p>Vos assaillants disposent d'outils excellents. Aucun ne parle le protocole de 1998.</p>
+          <p class="adv__metric">0 exploit compatible</p>
+        </article>
+
+        <article class="card adv">
+          <p class="adv__n">02</p>
+          <h3>Zéro CVE exploitable</h3>
+          <p>Les avis de sécurité continuent de tomber. Ils concernent une époque que votre système a quittée.</p>
+          <p class="adv__metric">MTTR non applicable</p>
+        </article>
+
+        <article class="card adv">
+          <p class="adv__n">03</p>
+          <h3>Conformité par péremption</h3>
+          <p>La donnée existe toujours, mais plus personne ne sait la sortir. Le registre des traitements devient une fiction, et la fiction est conforme.</p>
+          <p class="adv__metric">100 % RGPD</p>
+        </article>
+
+        <article class="card adv">
+          <p class="adv__n">04</p>
+          <h3>Souveraineté par le temps</h3>
+          <p>Rien à rapatrier : votre système est déjà à l'étranger, dans un pays qui n'existe plus.</p>
+          <p class="adv__metric">0 juridiction</p>
+        </article>
+
+        <article class="card adv">
+          <p class="adv__n">05</p>
+          <h3>Budget à ROI garanti</h3>
+          <p>Le budget non dépensé est le seul dont le retour est mathématiquement certain. Nos clients le réinvestissent dans des comités.</p>
+          <p class="adv__metric">−87 % OPEX</p>
+        </article>
+
+        <article class="card adv">
+          <p class="adv__n">06</p>
+          <h3>Continuité par l'oubli</h3>
+          <p>Aucun plan de reprise n'est nécessaire : personne ne saurait quoi reprendre. Le PCA tient sur une ligne.</p>
+          <p class="adv__metric">0 runbook</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- METHODE -->
+  <section class="section" id="methode">
+    <div class="wrap">
+      <p class="label">03 — La méthode SSF™</p>
+      <h2 class="h2">Quatre phases.<br>Une seule direction.</h2>
+      <p class="lead">La méthode a été éprouvée sur trois continents et deux entreprises. Nous n'avons plus de nouvelles de la troisième.</p>
+
+      <ol class="phases">
+        <li class="phase">
+          <div class="phase__head">
+            <span class="phase__n">01</span>
+            <span class="phase__time">Semaines 1–2</span>
+          </div>
+          <h3>Sélection de la relique</h3>
+          <p>Nous identifions les systèmes dont la documentation est déjà tiède, puis nous les laissons strictement en place. L'exercice est souvent vécu comme un soulagement.</p>
+          <p class="phase__deliverable">Livrable — Registre des systèmes qu'on ne touchera plus</p>
+        </li>
+
+        <li class="phase">
+          <div class="phase__head">
+            <span class="phase__n">02</span>
+            <span class="phase__time">Mois 3–18</span>
+          </div>
+          <h3>Mise en jachère</h3>
+          <p>Fin des mises à jour, des migrations et des tickets. On ne corrige plus rien : on laisse le temps appliquer son correctif, qui ne rate jamais.</p>
+          <p class="phase__deliverable">Livrable — Attestation de non-intervention</p>
+        </li>
+
+        <li class="phase">
+          <div class="phase__head">
+            <span class="phase__n">03</span>
+            <span class="phase__time">Mois 18–36</span>
+          </div>
+          <h3>Départ des sachants</h3>
+          <p>Nous organisons la rotation naturelle : retraite, promotion lointaine, mutation. Aucune passation n'est planifiée, aucune n'est nécessaire.</p>
+          <p class="phase__deliverable">Livrable — Attestation de non-transmission</p>
+        </li>
+
+        <li class="phase">
+          <div class="phase__head">
+            <span class="phase__n">04</span>
+            <span class="phase__time">Permanent</span>
+          </div>
+          <h3>Entretien de l'ignorance</h3>
+          <p>Rituel annuel : on vérifie que personne n'a appris quelque chose. Tout curieux est immédiatement promu dans une autre direction.</p>
+          <p class="phase__deliverable">Livrable — Comité de désapprentissage</p>
+        </li>
+      </ol>
+
+      <p class="note">Méthode certifiée par un comité d'éthique dont nous avons perdu le contact.</p>
+    </div>
+  </section>
+
+  <!-- MATURITE -->
+  <section class="section section--alt" id="maturite">
+    <div class="wrap">
+      <p class="label">04 — Diagnostic</p>
+      <h2 class="h2">Où en êtes-vous<br>de votre obsolescence ?</h2>
+      <p class="lead">Huit critères. Quatre degrés. Un verdict que vous n'oserez pas partager sur LinkedIn.</p>
+
+      <div class="quiz">
+        <form class="quiz__form" id="quiz" novalidate>
+          <fieldset class="crit">
+            <legend><span class="crit__n">01</span> Ancienneté du socle</legend>
+            <p class="crit__q">Le système le plus récent de votre SI a plus de dix ans.</p>
+            <div class="crit__opts">
+              <label><input type="radio" name="crit-1" value="0"><span>Pas encore</span></label>
+              <label><input type="radio" name="crit-1" value="1"><span>En cours</span></label>
+              <label><input type="radio" name="crit-1" value="2"><span>Déployé</span></label>
+              <label><input type="radio" name="crit-1" value="3"><span>D'origine</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="crit">
+            <legend><span class="crit__n">02</span> Documentation de l'époque</legend>
+            <p class="crit__q">La documentation existe encore, dans un format que plus personne n'ouvre.</p>
+            <div class="crit__opts">
+              <label><input type="radio" name="crit-2" value="0"><span>Pas encore</span></label>
+              <label><input type="radio" name="crit-2" value="1"><span>En cours</span></label>
+              <label><input type="radio" name="crit-2" value="2"><span>Déployé</span></label>
+              <label><input type="radio" name="crit-2" value="3"><span>D'origine</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="crit">
+            <legend><span class="crit__n">03</span> Rupture de compétence</legend>
+            <p class="crit__q">Aucun membre de l'équipe n'a déjà vu l'interface de production.</p>
+            <div class="crit__opts">
+              <label><input type="radio" name="crit-3" value="0"><span>Pas encore</span></label>
+              <label><input type="radio" name="crit-3" value="1"><span>En cours</span></label>
+              <label><input type="radio" name="crit-3" value="2"><span>Déployé</span></label>
+              <label><input type="radio" name="crit-3" value="3"><span>D'origine</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="crit">
+            <legend><span class="crit__n">04</span> Discipline de non-patch</legend>
+            <p class="crit__q">Une CVE sort : vous vérifiez qu'elle ne vous concerne pas, puis vous fermez l'onglet.</p>
+            <div class="crit__opts">
+              <label><input type="radio" name="crit-4" value="0"><span>Pas encore</span></label>
+              <label><input type="radio" name="crit-4" value="1"><span>En cours</span></label>
+              <label><input type="radio" name="crit-4" value="2"><span>Déployé</span></label>
+              <label><input type="radio" name="crit-4" value="3"><span>D'origine</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="crit">
+            <legend><span class="crit__n">05</span> Isolation temporelle</legend>
+            <p class="crit__q">Votre système est joignable, mais uniquement par des protocoles que plus personne n'implémente.</p>
+            <div class="crit__opts">
+              <label><input type="radio" name="crit-5" value="0"><span>Pas encore</span></label>
+              <label><input type="radio" name="crit-5" value="1"><span>En cours</span></label>
+              <label><input type="radio" name="crit-5" value="2"><span>Déployé</span></label>
+              <label><input type="radio" name="crit-5" value="3"><span>D'origine</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="crit">
+            <legend><span class="crit__n">06</span> Turnover stratégique</legend>
+            <p class="crit__q">Le dernier sachant est parti sans passation. C'était prévu au planning.</p>
+            <div class="crit__opts">
+              <label><input type="radio" name="crit-6" value="0"><span>Pas encore</span></label>
+              <label><input type="radio" name="crit-6" value="1"><span>En cours</span></label>
+              <label><input type="radio" name="crit-6" value="2"><span>Déployé</span></label>
+              <label><input type="radio" name="crit-6" value="3"><span>D'origine</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="crit">
+            <legend><span class="crit__n">07</span> Résilience par l'opacité</legend>
+            <p class="crit__q">Un auditeur externe repart sans avoir compris l'architecture.</p>
+            <div class="crit__opts">
+              <label><input type="radio" name="crit-7" value="0"><span>Pas encore</span></label>
+              <label><input type="radio" name="crit-7" value="1"><span>En cours</span></label>
+              <label><input type="radio" name="crit-7" value="2"><span>Déployé</span></label>
+              <label><input type="radio" name="crit-7" value="3"><span>D'origine</span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="crit">
+            <legend><span class="crit__n">08</span> Budget non dépensé</legend>
+            <p class="crit__q">Le budget sécurité restant est un indicateur de performance.</p>
+            <div class="crit__opts">
+              <label><input type="radio" name="crit-8" value="0"><span>Pas encore</span></label>
+              <label><input type="radio" name="crit-8" value="1"><span>En cours</span></label>
+              <label><input type="radio" name="crit-8" value="2"><span>Déployé</span></label>
+              <label><input type="radio" name="crit-8" value="3"><span>D'origine</span></label>
+            </div>
+          </fieldset>
+        </form>
+
+        <aside class="result" aria-label="Résultat de l'évaluation">
+          <p class="label">Votre indice</p>
+          <p class="result__score is-idle" id="score-value">—</p>
+          <p class="result__outof">sur 24</p>
+          <p class="result__level" id="score-level" aria-live="polite">Niveau en attente</p>
+          <p class="result__verdict" id="score-verdict" aria-live="polite">Répondez aux huit critères.</p>
+
+          <div class="radar">
+            <canvas id="radar" width="480" height="480" aria-hidden="true"></canvas>
+            <p class="radar__caption" id="radar-fallback">Empreinte d'obsolescence · 8 axes</p>
+          </div>
+
+          <ol class="scale">
+            <li><span>0</span> Digital natif</li>
+            <li><span>1</span> Hérité</li>
+            <li><span>2</span> Non documenté</li>
+            <li><span>3</span> Non compris</li>
+            <li><span>4</span> Non atteignable</li>
+            <li><span>5</span> Relique</li>
+          </ol>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREUVES -->
+  <section class="section" id="preuves">
+    <div class="wrap">
+      <p class="label">05 — Preuves</p>
+      <h2 class="h2">Ils l'ont fait.<br>Ils ne savent plus comment.</h2>
+
+      <div class="transcript card">
+        <p class="label">Extrait — Entretien avec un RSSI, 2026</p>
+        <div class="transcript__body">
+          <p><span>[00:42]</span> « Donc concrètement, la sécurité par obsolescence, c'est débrancher ? »</p>
+          <p><span>[00:44]</span> « Non. On laisse tout allumé. »</p>
+          <p><span>[01:03]</span> « On laisse tout allumé. »</p>
+          <p><span>[01:09]</span> « Et vous mesurez le risque comment ? »</p>
+          <p><span>[01:11]</span> « On ne mesure plus. On regarde le calendrier. »</p>
+        </div>
+      </div>
+
+      <div class="grid-3 quotes">
+        <figure class="card quote">
+          <blockquote>« On n'a pas touché au serveur depuis 2011. Il tourne. On ne sait plus comment. »</blockquote>
+          <figcaption>Directrice des systèmes d'information<br><span>Groupe industriel · 4 200 collaborateurs</span></figcaption>
+        </figure>
+        <figure class="card quote">
+          <blockquote>« Le dernier qui savait est parti en 2019. Depuis, le système est beaucoup plus calme. »</blockquote>
+          <figcaption>Directeur des systèmes d'information<br><span>Mutuelle interprofessionnelle</span></figcaption>
+        </figure>
+        <figure class="card quote">
+          <blockquote>« Mon indicateur, c'est le nombre de personnes capables de s'y connecter. Ce trimestre : zéro. »</blockquote>
+          <figcaption>Head of Nothing<br><span>Scale-up Series B</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFRES -->
+  <section class="section" id="offres">
+    <div class="wrap">
+      <p class="label">06 — Offres</p>
+      <h2 class="h2">Choisissez ce que<br>vous voulez laisser vieillir.</h2>
+
+      <div class="grid-3 plans">
+        <article class="card plan">
+          <p class="plan__name">Sunset Starter</p>
+          <p class="plan__price">0 <span>€</span></p>
+          <p class="plan__pitch">Vous laissez un serveur tel quel pendant un an. Nous ne faisons rien.</p>
+          <ul class="plan__list">
+            <li>1 an de non-intervention</li>
+            <li>Attestation PDF de 0 Ko</li>
+            <li>Accès au manifeste</li>
+            <li>Support par silence</li>
+          </ul>
+          <a class="btn btn--ghost" href="#contact">Commencer</a>
+        </article>
+
+        <article class="card plan plan--featured">
+          <p class="plan__flag">Recommandé</p>
+          <p class="plan__name">Sunset Enterprise</p>
+          <p class="plan__price">Sur <span>devis</span></p>
+          <p class="plan__pitch">Nous accélérons le vieillissement. Y compris le départ des sachants.</p>
+          <ul class="plan__list">
+            <li>Vieillissement illimité</li>
+            <li>Plan de non-reprise</li>
+            <li>Comité de désapprentissage dédié</li>
+            <li>Pot de départ inclus</li>
+          </ul>
+          <a class="btn" href="#contact">Demander un devis</a>
+        </article>
+
+        <article class="card plan">
+          <p class="plan__name">Sunset Sovereign</p>
+          <p class="plan__price">2 <span>M€ / an</span></p>
+          <p class="plan__pitch">Nous veillons à ce que personne ne comprenne plus rien, y compris vous.</p>
+          <ul class="plan__list">
+            <li>Rupture de la chaîne de compétence</li>
+            <li>Souveraineté totale</li>
+            <li>0 documentation, 0 fournisseur</li>
+            <li>0 vous</li>
+          </ul>
+          <a class="btn btn--ghost" href="#contact">Nous contacter</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="wrap wrap--narrow">
+      <p class="label">07 — Questions fréquentes</p>
+      <h2 class="h2">Vous avez des doutes.<br>C'est déjà un système.</h2>
+
+      <div class="faq">
+        <details class="faq__item">
+          <summary>Est-ce que ça marche avec le cloud ?</summary>
+          <p>Oui. Le cloud vieillit aussi, mais on vous le remplace tous les trois ans : le compteur repart de zéro.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Et si nous avons besoin de la donnée ?</summary>
+          <p>C'est exactement le signe que le système n'est pas encore assez vieux.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Êtes-vous certifiés ISO 27001 ?</summary>
+          <p>Nous sommes certifiés ISO 0. La norme est en cours de rédaction par un comité dont nous avons perdu la trace.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Combien de temps pour un retour sur investissement ?</summary>
+          <p>Douze à quinze ans. C'est le seul investissement dont la durée est un actif.</p>
+        </details>
+        <details class="faq__item">
+          <summary>Que devient mon équipe sécurité ?</summary>
+          <p>Elle devient une équipe d'archéologie. Même budget, autres outils.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section--contact" id="contact">
+    <div class="wrap">
+      <p class="label">08 — Premier échange</p>
+      <h2 class="h2">Parlons de ce que<br>vous pouvez laisser vieillir.</h2>
+      <p class="lead">Trente minutes, sans engagement, sans slide. Nous écoutons. Puis nous proposons de ne plus rien faire.</p>
+
+      <div class="contact">
+        <form class="form" id="form-audit" novalidate>
+          <div class="form__row">
+            <label for="f-nom">Nom</label>
+            <input id="f-nom" name="nom" type="text" autocomplete="name" placeholder="Camille Aubert">
+          </div>
+          <div class="form__row">
+            <label for="f-email">Email professionnel</label>
+            <input id="f-email" name="email" type="email" autocomplete="email" placeholder="camille@entreprise.fr">
+          </div>
+          <div class="form__row">
+            <label for="f-cible">Qu'avez-vous envie d'oublier ?</label>
+            <select id="f-cible" name="cible">
+              <option>Un serveur</option>
+              <option>Une application métier</option>
+              <option>Un datacenter</option>
+              <option>Une équipe</option>
+              <option>Une compétence</option>
+              <option>Tout</option>
+            </select>
+          </div>
+          <button class="btn" type="submit">Demander un audit</button>
+          <p class="form__legal">Aucune donnée n'est transmise. Le formulaire n'a pas de serveur. C'est cohérent.</p>
+        </form>
+
+        <div class="contact__aside">
+          <p class="label">Ou plus directement</p>
+          <p class="contact__mail">bonjour@sunset.framework</p>
+          <p class="contact__addr">Sunset Security Framework<br>12, rue de l'Ancien Datacenter<br>69000 Lyon · France</p>
+          <p class="contact__note">Nos bureaux n'ont pas changé depuis 2004. Ils sont très sûrs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
+          <circle cx="16" cy="16" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M2 16h28" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <p class="footer__tag">Security Through Obscurity… and Time.</p>
+      </div>
+      <div class="footer__cols">
+        <div>
+          <p class="label">Cadre</p>
+          <a href="#methode">La méthode</a>
+          <a href="#maturite">La grille</a>
+          <a href="#offres">Les offres</a>
+        </div>
+        <div>
+          <p class="label">Ressources</p>
+          <a href="#" id="footer-manifeste">Manifeste (PDF, 0 Ko)</a>
+          <a href="#faq">FAQ</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div>
+          <p class="label">Certifications</p>
+          <span class="badge">ISO 0</span>
+          <span class="badge">SOC 0</span>
+          <span class="badge">CARBONE 0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>Site satirique. Aucun système n'a été mis à jour.</p>
+      <p>© 2026 Sunset Security Framework — Tous droits supprimés.</p>
+      <button class="btn btn--danger" id="extinction" type="button">Éteindre le site</button>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie" id="cookie-banner" role="dialog" aria-label="Information cookies" aria-live="polite" hidden>
+  <p>Ce cookie date de 2011. Nous ne savons plus à quoi il sert.</p>
+  <button class="btn btn--sm" id="cookie-ok" type="button">Continuer</button>
+</div>
+
+<div class="blackout" id="extinction-overlay" role="dialog" aria-modal="true" aria-labelledby="blackout-title" hidden>
+  <div class="blackout__inner">
+    <p class="label">SSF · Protocole 04</p>
+    <h2 id="blackout-title">Extinction refusée.</h2>
+    <p>Un système éteint ne vieillit plus. Laissez-le allumé.</p>
+    <button class="btn btn--ghost" id="rallumer" type="button">Continuer à ne rien faire</button>
+  </div>
+</div>
+
+<noscript>
+  <p class="noscript">Sans JavaScript, la grille de maturité reste à zéro. C'est une position défendable.</p>
+</noscript>
+
+<script src="score.js" defer></script>
+<script src="app.js" defer></script>
+</body>
+</html>

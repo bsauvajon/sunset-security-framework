@@ -3,7 +3,7 @@
 (function (root) {
   'use strict';
 
-  var LEVELS = [
+  var LEVELS_FR = [
     {
       min: 0,
       name: 'Digital natif',
@@ -36,6 +36,39 @@
     }
   ];
 
+  var LEVELS_EN = [
+    {
+      min: 0,
+      name: 'Digital native',
+      verdict: 'Everything is recent, patched and understood. You are the ideal target.'
+    },
+    {
+      min: 4,
+      name: 'Inherited',
+      verdict: 'Your system is ageing. The documentation is starting to smell of mothballs.'
+    },
+    {
+      min: 8,
+      name: 'Undocumented',
+      verdict: 'Nobody reads the documentation any more. That is a first result.'
+    },
+    {
+      min: 12,
+      name: 'Incomprehensible',
+      verdict: 'The team no longer understands what it administers. The gap is widening.'
+    },
+    {
+      min: 16,
+      name: 'Unreachable',
+      verdict: 'Your attackers gave up before you did. You are getting close.'
+    },
+    {
+      min: 20,
+      name: 'Relic',
+      verdict: 'The system has been running since 1998. Nobody knows how. That is the goal.'
+    }
+  ];
+
   function isInteger(n) {
     return typeof n === 'number' && isFinite(n) && Math.floor(n) === n;
   }
@@ -55,22 +88,29 @@
     return total;
   }
 
-  function levelFor(score) {
+  function levelFor(score, locale) {
     if (!isInteger(score) || score < 0 || score > 24) {
       throw new RangeError('score must be an integer between 0 and 24');
     }
+    var levels = locale === 'en' ? LEVELS_EN : LEVELS_FR;
     var index = 0;
-    for (var i = 0; i < LEVELS.length; i++) {
-      if (score >= LEVELS[i].min) index = i;
+    for (var i = 0; i < levels.length; i++) {
+      if (score >= levels[i].min) index = i;
     }
     return {
       index: index,
-      name: LEVELS[index].name,
-      verdict: LEVELS[index].verdict
+      name: levels[index].name,
+      verdict: levels[index].verdict
     };
   }
 
-  var api = { computeScore: computeScore, levelFor: levelFor, LEVELS: LEVELS };
+  var api = {
+    computeScore: computeScore,
+    levelFor: levelFor,
+    LEVELS: LEVELS_FR,
+    LEVELS_FR: LEVELS_FR,
+    LEVELS_EN: LEVELS_EN
+  };
   root.SSFScore = api;
   if (typeof module !== 'undefined' && module.exports) module.exports = api;
 })(typeof globalThis !== 'undefined' ? globalThis : this);

@@ -8,6 +8,7 @@ travail. Les outils offensifs modernes ne parlent plus son protocole ; plus
 personne ne sait s'en servir, y compris dans l'organisation qui l'héberge.
 
 **Site en ligne :** https://bsauvajon.github.io/sunset-security-framework/
+**English version :** https://bsauvajon.github.io/sunset-security-framework/en/
 
 ## Lancer en local
 
@@ -21,7 +22,8 @@ python3 -m http.server 8765
 
 | Fichier | Rôle |
 |---|---|
-| `index.html` | Contenu et structure de la page |
+| `index.html` | Contenu et structure de la page (français) |
+| `en/index.html` | Version anglaise, adaptée et non traduite |
 | `styles.css` | Direction visuelle, responsive, mouvement réduit |
 | `score.js` | Logique pure de notation (testable sous Node) |
 | `app.js` | Grille interactive, radar, compteur, interactions |

@@ -256,6 +256,17 @@ h1, h2, h3 { margin: 0; font-weight: 800; }
   white-space: nowrap;
 }
 
+.lang {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  padding: 5px 8px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+.lang:hover { color: var(--accent); border-color: var(--accent); }
+
 .meterbar {
   position: absolute;
   left: 0;

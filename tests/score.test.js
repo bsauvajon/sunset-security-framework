@@ -39,3 +39,11 @@ test('refuse un score hors bornes', () => {
   assert.throws(() => levelFor(-1), RangeError);
   assert.throws(() => levelFor(3.5), RangeError);
 });
+
+test('sert les niveaux dans la langue demandée', () => {
+  assert.strictEqual(levelFor(24).name, 'Relique');
+  assert.strictEqual(levelFor(24, 'fr').name, 'Relique');
+  assert.strictEqual(levelFor(24, 'en').name, 'Relic');
+  assert.strictEqual(levelFor(0, 'en').index, 0);
+  assert.strictEqual(levelFor(20, 'en').index, 5);
+});

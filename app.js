@@ -6,6 +6,27 @@
     ? window.matchMedia('(prefers-reduced-motion: reduce)')
     : { matches: false };
 
+  var LANG = ((document.documentElement.lang || 'fr').slice(0, 2) || 'fr').toLowerCase();
+
+  var STRINGS = {
+    fr: {
+      levelPrefix: 'Niveau ',
+      pending: 'Niveau en attente',
+      idle: 'Répondez aux huit critères.',
+      sent: 'Merci. Votre demande a été archivée, puis supprimée.',
+      pdf: 'SSF-Manifeste-2026.pdf'
+    },
+    en: {
+      levelPrefix: 'Level ',
+      pending: 'Level pending',
+      idle: 'Answer all eight criteria.',
+      sent: 'Thank you. Your request has been archived, then deleted.',
+      pdf: 'SSF-White-Paper-2026.pdf'
+    }
+  };
+
+  var T = STRINGS[LANG] || STRINGS.fr;
+
   function $(selector, scope) {
     return (scope || document).querySelector(selector);
   }
@@ -228,8 +249,8 @@
       radarValues = null;
       scoreEl.textContent = '—';
       scoreEl.classList.add('is-idle');
-      levelEl.textContent = 'Niveau en attente';
-      verdictEl.textContent = 'Répondez aux huit critères.';
+      levelEl.textContent = T.pending;
+      verdictEl.textContent = T.idle;
       drawRadar(canvas, null, false);
     }
 
@@ -245,13 +266,13 @@
       }
 
       var score = api.computeScore(answers);
-      var level = api.levelFor(score);
+      var level = api.levelFor(score, LANG);
 
       radarValues = answers.map(function (value) { return value / 3; });
 
       scoreEl.textContent = String(score);
       scoreEl.classList.remove('is-idle');
-      levelEl.textContent = 'Niveau ' + level.index + ' · ' + level.name;
+      levelEl.textContent = T.levelPrefix + level.index + ' · ' + level.name;
       verdictEl.textContent = level.verdict;
 
       drawRadar(canvas, radarValues, true);
@@ -273,7 +294,7 @@
       var url = URL.createObjectURL(blob);
       var link = document.createElement('a');
       link.href = url;
-      link.download = 'SSF-Manifeste-2026.pdf';
+      link.download = T.pdf;
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
@@ -390,7 +411,7 @@
       var done = document.createElement('p');
       done.className = 'form__done';
       done.setAttribute('tabindex', '-1');
-      done.textContent = 'Merci. Votre demande a été archivée, puis supprimée.';
+      done.textContent = T.sent;
       form.replaceWith(done);
       done.focus();
     });
